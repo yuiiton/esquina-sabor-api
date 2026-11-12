@@ -10,7 +10,7 @@ Permitir que o usuário faça login na aplicação com nome e CPF. Se o usuário
 
 - O usuário acessa a tela de login do site.
 - O usuário informa nome e CPF.
-- O sistema verifica se o usuário já existe pelo nome.
+- O sistema verifica se o usuário já existe pelo cpf.
 - Se existir, valida se o CPF informado corresponde ao CPF do usuário.
 - Se não existir, cria um novo usuário com esse nome e CPF.
 - O sistema gera um JWT com a role correspondente.
