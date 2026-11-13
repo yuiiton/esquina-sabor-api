@@ -28,6 +28,12 @@ prisma/*.db-journal
 prisma/dev.db
 prisma/dev.db-journal
 
+# Banco de dados local
+src/data/*.sqlite
+src/data/*.sqlite-journal
+src/data/*.db
+src/data/*.db-journal
+
 # Sistema operacional
 .DS_Store
 Thumbs.db

@@ -1,10 +1,30 @@
 import express from 'express';
+import { execSync } from 'node:child_process';
+import { mkdirSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import usersRouter from './domains/users/router.js';
 import productsRouter from './domains/products/router.js';
 import ordersRouter from './domains/orders/router.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
+const projectRoot = path.resolve(currentDir, '..');
+const dataDir = path.join(currentDir, 'data');
+
+mkdirSync(dataDir, { recursive: true });
+
+try {
+  execSync('npx prisma db push --schema=src/prisma/schema.prisma', {
+    cwd: projectRoot,
+    stdio: 'inherit',
+    env: process.env,
+  });
+} catch (error) {
+  console.error('Falha ao sincronizar o banco de dados com o Prisma:', error.message);
+  process.exit(1);
+}
 
 app.use(express.json());
 
