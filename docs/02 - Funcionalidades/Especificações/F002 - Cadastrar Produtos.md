@@ -70,16 +70,7 @@ POST /api/v1/products
 ## ProductCreateRequest
 
 - name: string, obrigatório, 3 a 50 caracteres
-- description: string, opcional, até 150 caracteres
+- description: string, opcional, 3 a 150 caracteres
 - price: number, obrigatório, maior que zero
 - imageUrl: string, obrigatório
 - available: boolean, obrigatório
-
-## ProductCreateResponse
-
-- id: number
-- name: string
-- description: string | null
-- price: number
-- imageUrl: string
-- available: boolean

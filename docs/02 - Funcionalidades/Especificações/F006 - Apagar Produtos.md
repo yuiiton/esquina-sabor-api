@@ -40,10 +40,3 @@ DELETE /api/v1/products/:id
   "message": "Produto removido com sucesso."
 }
 ```
-
-# Schemas
-
-## DeleteProductResponse
-
-- success: boolean
-- message: string

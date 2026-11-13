@@ -62,22 +62,3 @@ PATCH /api/v1/products/:id
   "message": "Produto atualizado com sucesso."
 }
 ```
-
-# Schemas
-
-## ProductUpdateRequest
-
-- name: string, opcional, 3 a 50 caracteres
-- description: string, opcional, até 150 caracteres
-- price: number, opcional, maior que zero
-- imageUrl: string, opcional
-- available: boolean, opcional
-
-## ProductUpdateResponse
-
-- id: number
-- name: string
-- description: string | null
-- price: number
-- imageUrl: string
-- available: boolean

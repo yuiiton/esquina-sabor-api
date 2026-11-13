@@ -45,14 +45,3 @@ GET /api/v1/products/:id
   }
 }
 ```
-
-# Schemas
-
-## ProductResponse
-
-- id: number
-- name: string
-- description: string | null
-- price: number
-- imageUrl: string
-- available: boolean

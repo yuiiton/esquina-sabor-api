@@ -13,3 +13,12 @@ model User {
   cpf   String @unique
   role  String @default("user")
 }
+
+model Product {
+  id          Int     @id @default(autoincrement())
+  name        String  @unique
+  description String?
+  price       Float
+  imageUrl    String
+  available   Boolean @default(true)
+}

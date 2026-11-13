@@ -50,21 +50,3 @@ GET /api/v1/products?page=1&limit=10
   }
 }
 ```
-
-# Schemas
-
-## ProductResponse
-
-- id: number
-- name: string
-- description: string | null
-- price: number
-- imageUrl: string
-- available: boolean
-
-## ProductListResponse
-
-- items: ProductResponse[]
-- page: number
-- limit: number
-- total: number
