@@ -16,7 +16,7 @@ O Esquina Sabor é um restaurante fictício que deseja possuir um sistema web pa
 
 Os usuários são as pessoas que acessam a pagina web e realizam login na plataforma.
 
-Para simplificação do escopo, a autenticação do sistema não usa senha. O login é realizado com o nome e o CPF, sendo o CPF utilizado como credencial principal para validar a identidade do usuário. Caso o usuário ainda não exista, o sistema cria automaticamente um novo registro com esse nome e CPF. Se o nome informado for ``admin`` e o CPF for ``00000000000``, o sistema autentica o usuário como administrador e utiliza esse registro previamente criado no seed do banco SQLite.
+Para simplificação do escopo, a autenticação do sistema não usa senha. O login é realizado com o nome e o CPF, sendo o CPF utilizado como credencial principal para validar a identidade do usuário. Caso o usuário ainda não exista, o sistema cria automaticamente um novo registro com esse nome e CPF. Se o nome informado for ``admin`` e o CPF for ``00000000000``, o sistema autentica o usuário como administrador.
 
 Um usuário logado possui uma role em jwt que define o seu nível de acesso ao sistema. Sendo essa role ``user`` ou ``admin``.
 
